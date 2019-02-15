@@ -10,6 +10,41 @@
 {% endif %}
 
 <html class="{{ html_class | downcase }}" lang="{{ site.language }}">
+  <script>
+    
+                 //<![CDATA[
+                window.dataLayer = window.dataLayer || [];
+                dataLayer.push({
+                    'user': {
+                        'id': 'guest',
+                        'group': 'guest'
+                      },
+                    'site': {
+                        'country': 'SG',
+                        'type': 'eStore'
+                      }
+                });
+                //]]>
+
+  </script>
+<!-- Google Tag Manager -->
+<script>
+                    //<![CDATA[
+                    (function (w, d, s, l, i) {
+                        w[l] = w[l] || [];
+                        w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+                        var f = d.getElementsByTagName(s)[0];
+                        var j = d.createElement(s);
+                        var dl = l != 'dataLayer' ? '&l=' + l : '';
+                        j.async = true;
+                        j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+                        f.parentNode.insertBefore(j, f);
+                    })(window, document, 'script', 'dataLayer', 'GTM-NRWXJZ8');
+
+                    var dlCurrencyCode = 'SGD';
+                     //]]>
+</script>
+<!-- End Google Tag Manager -->
 <head>
   {% include _partials/head.html %}
   <title>{{ title }}</title>
@@ -17,7 +52,9 @@
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="{{ page.lang | default: page.language | default: site.language }}">
-
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NRWXJZ8" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
   {% assign container_class = "container " %}
   {% if site.sidebar.position %}
     {% assign container_class = container_class | append: 'sidebar-position-' | append: site.sidebar.position %}
